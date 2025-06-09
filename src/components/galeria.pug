@@ -1,0 +1,25 @@
+mixin col-gallery(src, alt)
+  .col-lg-3.col-6.mb-4
+    a.logoHover-image(href=src title=alt)
+      img.img-fluid.lazyload(data-src=src alt=alt width='416' height='416')
+.container
+  .row
+    .col-12
+      .titles
+        h2.c-white Projetos 
+          span Galeria
+  .row
+    +col-gallery('src/assets/galeria/1.webp', 'Entrada')
+    +col-gallery('src/assets/galeria/2.webp', 'Mural')
+    +col-gallery('src/assets/galeria/3.webp', 'Armários')
+    +col-gallery('src/assets/galeria/4.webp', 'Baias')
+    +col-gallery('src/assets/galeria/5.webp', 'Baias e armários')
+
+
+  .row
+    .col-12 
+      .mt-4.text-center
+        a.btn.btn-outline-danger.rounded-0(href="https://www.instagram.com/cabinesestudohbc" title="Veja mais no instagram" target="_blank") 
+          span.fa-brands.fa-instagram
+          |  Veja mais no instagram
+

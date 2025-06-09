@@ -1,0 +1,89 @@
+extends /layouts/template.pug
+block main
+  header
+    .hero.hero-style.hero-border.b-gradient-primary
+      include ../components/hero.pug
+  section#sobre.sobre.py-5
+    .container
+      .row 
+        .col-12 
+          p.text-center.text-xl.lh2
+            | Cansado de estudar em casa e sempre acabar no celular? A cabine de estudos <b>HBC</b> foi feita pra quem quer deixar a procrastinação de lado e encarar os estudos com foco total.<br/><br/> Aqui, cada detalhe é pensado pra te dar o incentivo e o conforto que você precisa: internet veloz, cabines individuais e silenciosas, copa para refeições, ar-condicionado e muito mais!<br/><br/> E se você gosta de dar aquele respiro no meio dos estudos, agora vem a melhor parte...<br/><br/> O shopping ao redor oferece tudo: praça de alimentação pra matar a fome, barbeiro, cabeleireira e manicure pra manter a autoconfiança em dia e até papelaria pra salvar o dia quando faltar material.
+  div
+
+    mixin card(classcard, src, alt, text)
+      .flex-fill
+        .card.cards.p-5.text-center(class=classcard)
+          .boximg
+            img(src=src, alt=alt)
+          .title
+            = alt
+          .text
+            = text 
+    .card-flex
+      +card('style1', 'src/assets/shield.svg', 'Segurança no Ambiente', 'Ambiente monitorado e seguro para você trabalhar com tranquilidade.')
+      +card('style3', 'src/assets/wifi.svg', 'Wi-Fi de Alta Velocidade', 'Conexão rápida e estável para manter sua produtividade em alta.')
+      +card('style2', 'src/assets/chair.svg', 'Cabine Individual', 'Privacidade e conforto em estações de trabalho exclusivas.')
+      +card('style4', 'src/assets/coffe.svg', 'Área de Café', 'Espaço aconchegante para suas pausas com café sempre fresco.')
+
+  .hero-paralax.hero-paralax--background
+    .hero-gradient.hero-gradient--gray
+      .d-flex.justify-content-center.align-items-center.h-100.hero-caption.px-1
+        h2.text-center.text-xl3 A HBC possui o ambiente ideal para quem quer chegar mais longe. <br/><br/> Estude conosco e veja seu esforço se transformar em resultados!
+  section#planos.b-tertiary
+    .container
+      .row
+        .col-12
+          h2.text-center.c-white Nossos Planos
+          p.text-center.c-secondary Anuais
+        mixin planos(title, small, bigger, small2, textsmall, textbigger)
+          .col-lg-4.col-sm-6.mb-3
+            .card.cards.style5.p-3
+              h4.c-secondary.mb-3.text-center
+                strong
+                  = title
+              small
+                = small
+              p.text-xl2.c-white.m-0
+                strong 
+                  = bigger 
+              small.mb-3
+                = small2 
+              p.c-ccc.m-0
+                = textsmall
+              p.c-ccc
+                strong
+                  = textbigger
+              p.c-ccc 
+                | Mais planos entrando em contato
+              include ../components/whatsapp.pug
+        .col-12 
+        +planos('TURNO SIMPLES','A partir de:','R$ 210,00','Mensais','Manhã, tarde ou noite','Segunda a Sexta')
+        +planos('TURNO COMPLETO','A partir de:','R$ 270,00','Mensais','Manhã, tarde ou noite','Domingo a Domingo')
+        +planos('TURNO FDS','A partir de:','R$ 85,00','Mensais','Manhã, tarde ou noite','Finais de Semana')
+      //- .row
+      //-   .col-12 
+      //-     h3.text-xl.c-white.text-center Turno Completo
+      //-   +planos('TURNO COMPLETO','A partir de:','R$ 270,00','Mensais','Manhã, tarde ou noite','Domingo a Domingo')
+      //-   +planos('DOIS TURNOS COMPLETOS','A partir de:','R$ 345,00','Mensais','Manhã, tarde ou noite','Domingo a Domingo')
+      //-   +planos('TRÊS TURNOS COMPLETOS','A partir de:','R$ 480,00','Mensais','Manhã, tarde ou noite','Domingo a Domingo')
+      //- .row
+      //-   .col-12 
+      //-     h3.text-xl.c-white.text-center Turno FDS
+      //-   +planos('TURNO FDS','A partir de:','R$ 85,00','Mensais','Manhã, tarde ou noite','Finais de Semana')
+      //-   +planos('DOIS TURNOS FDS','A partir de:','R$ 150,00','Mensais','Manhã, tarde ou noite','Finais de Semana')
+      //-   +planos('TRÊS TURNO FDS','A partir de:','R$ 210,00','Mensais','Manhã, tarde ou noite','Finais de Semana')
+
+
+  section#galeria.photo-gallery
+    include ../components/galeria.pug
+  a#localizacao.btn.d-block.b-secondary.rounded-0.text-xl2.p-4.fw-bold(href="hhttps://maps.app.goo.gl/6A6SEoALbyrQjiaQ9" title="Encontre a Rota") 
+    .iplay
+      .iplay-item
+        span.iplay-hover
+          span.iplay-icon
+            i.fa-sharp.fa-solid.fa-location-dot
+    span.c-tertiary &nbsp; LOCALIZAÇÃO
+  iframe.page-section.scroll-lock.locked(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.3562205014755!2d-47.810229799999995!3d-15.890398099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2173c9baaff1%3A0x22fdb2f28b4820a2!2sJardim%20Acropolis!5e0!3m2!1spt-BR!2sbr!4v1749478521051!5m2!1spt-BR!2sbr', width='100%', height='400', frameborder='0', style='border:0', allowfullscreen='', title="Localização da Empresa")
+  footer#contato.b-black2
+    include ../components/footer.pug

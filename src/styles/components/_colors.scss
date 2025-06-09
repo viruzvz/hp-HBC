@@ -1,0 +1,64 @@
+.c-primary {
+  color: $c-primary !important;
+}
+
+.c-secondary {
+  color: $c-secondary !important;
+}
+
+.c-tertiary {
+  color: $c-tertiary !important;
+}
+
+.c-white {
+  color: white;
+}
+
+.c-ccc {
+  color: #ccc;
+}
+
+.c-whitegray {
+  color: #999999;
+}
+
+.b-white {
+  background-color: white;
+}
+
+.b-primary {
+  background-color: $c-primary;
+}
+
+.b-secondary {
+  background-color: $c-secondary;
+}
+
+.b-tertiary {
+  background-color: $c-tertiary;
+}
+
+.b-lowgray {
+  background-color: #f1f1f1;
+}
+
+.b-lowergray {
+  background-color: #f6f6f6;
+}
+
+.b-black {
+  background-color: #000;
+}
+
+.b-black2 {
+  background-color: #222;
+}
+
+.b-white-op {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+}
+
+.b-gradient-primary {
+  background: #022F4F;
+  background: linear-gradient(90deg,rgba(2, 47, 79, 1) 0%, rgba(10, 91, 148, 1) 50%, rgba(2, 47, 79, 1) 100%);
+}

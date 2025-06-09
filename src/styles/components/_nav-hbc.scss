@@ -1,0 +1,23 @@
+.nav-hbc {
+  background-color: $primary-hbc;
+  color: #fff;
+  height: 100px;
+  .nav-link {
+    color:#fff;
+    text-transform: uppercase;
+  }
+  .nav-link.active {
+    color: $secondary-hbc;
+  }
+  .nav-link:hover {
+    color: $secondary-hbc;
+  }
+  .navbar-collapse {
+    z-index: 3;
+    background-color: $c-primary;
+    padding: 15px;
+  }
+  .navbar-toggler {
+    background-color: #fff;
+  }
+}

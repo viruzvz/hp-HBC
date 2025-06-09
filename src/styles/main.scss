@@ -1,0 +1,82 @@
+@import "bootstrap";
+@import "fontawesome";
+@import "components/variables";
+@import "components/nav-hbc";
+@import "components/hero";
+@import "components/sizes";
+@import "components/link";
+@import "components/card";
+@import "components/colors";
+@import "components/galeria";
+@import "components/iplay";
+@import "components/wrapper-cookie";
+@import "components/whatsappbutton";
+// default page styles
+body {
+  font-family: 'Sansation', 'Roboto', 'Montserrat', sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #555;
+}
+
+iframe {
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $c-tertiary;
+}
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (max-width: 991.98px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.sansation-light {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sansation-regular {
+  font-family: "Sansation", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sansation-bold {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sansation-light-italic {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.sansation-regular-italic {
+  font-family: "Sansation", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sansation-bold-italic {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.lh2 {
+  line-height: 2;
+}
+.sobre {
+  background-image: url('/src/assets/HBC.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
