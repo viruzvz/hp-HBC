@@ -22228,6 +22228,9 @@ textarea.form-control.is-invalid {
     .hero-style {
         min-height: 400px
     }
+    .hero-paralax {
+        height: 300px !important;
+    }
 }
 
 .hero-style2 {
